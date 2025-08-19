@@ -1,21 +1,32 @@
 <style>
-    /* Styling untuk elemen dengan class 'footer' */
+    body {
+        min-height: 100vh;       /* Biar body selalu minimal setinggi layar */
+        display: flex;
+        flex-direction: column;  /* Atur tata letak jadi vertikal */
+        margin: 0;               /* Hilangkan margin bawaan */
+    }
+
+    main {
+        flex: 1;                 /* Bagian utama konten mengisi ruang kosong */
+    }
+
     .footer {
-        position: absolute;     /* Meletakkan footer dengan posisi absolut terhadap halaman */
-        bottom: 0;               /* Menempel di bagian bawah halaman */
-        right: 0;                /* Menempel di sisi kanan halaman */
-        height: 50px;            /* Tinggi footer 50 piksel */
-        width: 100%;             /* Lebar footer memenuhi layar */
-        background-color: #303030; /* Warna latar belakang abu gelap */
-        color: white;            /* Warna teks putih */
-        text-align: center;      /* Teks berada di tengah secara horizontal */
-        line-height: 50px;       /* Tinggi baris sama dengan tinggi footer 
-                                     supaya teks berada di tengah secara vertikal */
+        height: 50px;            
+        width: 100%;
+        background-color: #303030;
+        color: white;
+        text-align: center;
+        line-height: 50px;
     }
 </style>
 
-<!-- Bagian footer halaman -->
+<!-- Struktur konten utama -->
+<main>
+    {{-- Konten halamanmu taruh di sini --}}
+    @yield('content')
+</main>
+
+<!-- Footer -->
 <div class="footer">
-    <!-- Teks hak cipta yang tampil di footer -->
     <span>Copyright MbahGondol Master Of Laravel-12</span>
 </div>
